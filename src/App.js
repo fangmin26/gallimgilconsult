@@ -9,6 +9,7 @@ import AdminSignin from "./screens/admin/signinSignup/AdminSignin";
 import Contact from "./screens/admin/Contact";
 import Project from "./screens/admin/Project";
 import Tags from "./screens/admin/Tags";
+import Port1 from "./screens/portfolio/Port1";
 
 function App() {
   return (
@@ -16,10 +17,15 @@ function App() {
       <ToastContainer />
       <Layout>
         <Routes>
+        <Route path="/" element={<Port1 />} />
+
+
+
+
 
           {/* admin */}
-          <Route path="/" element={<AdminMain />} />
-          {/* <Route path="/admin/signin" element={<AdminSignin />} /> */}
+          {/* <Route path="/" element={<AdminMain />} /> */}
+    
           <Route path="/admin/tags" element={<Tags />} />
 
           <Route path="/admin/project" element={<Project />} />

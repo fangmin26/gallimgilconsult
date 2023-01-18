@@ -36,3 +36,38 @@
     transform: rotate(360deg);
   }
 }
+
+@media only screen and (max-width: 768px){
+  .section{
+    padding: 0 20px;
+  }
+  .contentLayout{
+    display: block;
+  }
+  .content{
+    width:100%
+  }
+  .headerHidden{
+    display: none;
+  }
+  .sectionCheckpointLayout{
+    border-radius: 0;
+  }
+  .sectionCheckpoint{
+    display:block;
+    padding:60px 20px;
+  }
+  .sectionCheckpoint div{
+    padding-bottom: 40px;
+  }
+  .bottomsect{
+    padding: 60px 20px;
+  }
+  .cards{
+    display: block;
+
+  }
+  .cards div{
+    margin-bottom: 20px;
+  }
+}

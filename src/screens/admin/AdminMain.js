@@ -4,8 +4,7 @@ import { adminSideTitle } from '../../features/admin/commonAdmin'
 import Navbar from './components/common/Navbar'
 import Sidebar from './components/common/Sidebar'
 import Pagination from "pagination-peiss"
-// react version이 안 맞아서 legacy-peer-deps로 일단 설치 추후 코드 까볼것. buffer도 깔아야한다고 에러 떠서 같이 설치함
-import ReactHtmlParser from 'react-html-parser'; 
+
 const AdminMain = () => {
   const dispatch = useDispatch()
   useEffect(()=>{
@@ -21,17 +20,13 @@ const AdminMain = () => {
     {id:6, title:"title1",src:"bg-[url('../public/images/photos/sampleimage.jpg')]", content:"Lorem Ipsum is simply dummy text of the printing and typesetting industry. L...", tags:["sql","javascript","aws","python"]}
   ]
   const mainList = (el) =>{
-    // let parser = new DOMParser();
-    // const doc = parser.parseFromString(el.content,'text/html')
-    // const makeContentHtml = doc.body.outerHTML
-    // console.log(typeof makeContentHtml,"html")
-    let newCont = ReactHtmlParser(el.content)
+
     return( 
       <>
         <div className={'bg-gray-100 h-[250px] ' +el.src} ></div>
         <div className='p-4'>
           <p className='font-bold'>{el.title}</p>
-          <p>{newCont}</p>
+ 
           <ul className='flex gap-x-2'>
             {el.tags?.map((elem,idx)=>
             <li 
