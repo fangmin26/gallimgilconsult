@@ -1,16 +1,16 @@
 {
   "files": {
     "main.css": "/gallimgilconsult/static/css/main.1a91d970.css",
-    "main.js": "/gallimgilconsult/static/js/main.bc0f5b2f.js",
+    "main.js": "/gallimgilconsult/static/js/main.43f87b85.js",
     "static/media/sampleimage.jpg": "/gallimgilconsult/static/media/sampleimage.5bdc8a3a66f35523dd58.jpg",
     "index.html": "/gallimgilconsult/index.html",
     "static/media/checkon.svg": "/gallimgilconsult/static/media/checkon.08d47c8e74b3f932ad59.svg",
     "static/media/checkoff.svg": "/gallimgilconsult/static/media/checkoff.f54eb7af7c005df3237d.svg",
     "main.1a91d970.css.map": "/gallimgilconsult/static/css/main.1a91d970.css.map",
-    "main.bc0f5b2f.js.map": "/gallimgilconsult/static/js/main.bc0f5b2f.js.map"
+    "main.43f87b85.js.map": "/gallimgilconsult/static/js/main.43f87b85.js.map"
   },
   "entrypoints": [
     "static/css/main.1a91d970.css",
-    "static/js/main.bc0f5b2f.js"
+    "static/js/main.43f87b85.js"
   ]
 }
