@@ -57,9 +57,9 @@ const Port1 = () => {
             />
         </section>
         <section className='bg-red-100 p-4 '>
-            <h5 className='py-4'>3.구매시 미리보기</h5>
+            <h5 className='py-4'>3.구매시 미리보기(sample)</h5>
         <embed
-          src='http://md.egloos.com/file/pdf_sample.pdf'
+          src='https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf'
           type="application/pdf"
           width="100%"
           height="500px"
