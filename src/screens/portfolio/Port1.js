@@ -1,8 +1,7 @@
-import React, { useEffect } from 'react'
-
+import React, { useEffect, useState } from 'react'
 const Port1 = () => {
-
-
+  const [loadedpdf, setLoadedPdf] = useState([])
+  console.log(loadedpdf)
   return (
     <div className='w-full h-full'>
         <header className='bg-[#3D55CC] w-full h-14 flex justify-center items-center text-white'>
@@ -10,12 +9,9 @@ const Port1 = () => {
             <div className='headerHidden'>
             Since you're located in<strong> South Korea,</strong> you can get a <strong>10% discount.</strong>
             </div>
-           
         </header>
         <section className='px-24 section'>
-
-                <h1 className='py-6 font-semibold text-xl tracking-tighter text-right'>Gallimgil Consultant</h1>
-
+            <h1 className='py-6 font-semibold text-xl tracking-tighter text-right'>Gallimgil Consultant</h1>
             <div className='pt-24 contentLayout flex gap-x-8 '>
                 <div className='content w-1/2'>
                     <span className='text-gray-500 font-semibold text-sm tracking-[.4rem]'>FIRST SUBJECT</span>
@@ -26,10 +22,49 @@ const Port1 = () => {
                     <p className='pt-8 text-gray-500 font-semibold leading-6 text'>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type sp</p>
                     <a 
                     href='tel:01029693106'
-                    className=' mt-4 mb-8 inline-block bg-[#3D55CC] p-4 rounded-lg text-white font-bold'>make a call</a>
+                    className=' mt-4 mb-8 flex inline-block bg-[#3D55CC] p-4 rounded-lg text-white font-bold'>make a call</a>
                 </div>
                 <img className ="content w-1/2" src="https://post-phinf.pstatic.net/MjAyMTEwMjVfODUg/MDAxNjM1MTQ0Mzk5NDE5.jE6nqw7xzx572mnnE5Dek8c7ZzcBMUj-fF4tyLXTcf8g.4QRnAlqdIFsePgBMUAvnORH8fgqwmWavfMtNWixyZ_Qg.JPEG/%ED%94%84%EB%A1%9C%ED%95%84.jpeg?type=w1200"/>
             </div>
+        </section>
+        <section className='bg-green-100 p-4'>  
+            <h5 className='py-4'>1.pdf 다운로드 받기</h5>
+            <a href='http://md.egloos.com/file/pdf_sample.pdf'
+                target='_blank'
+                rel="noreferrer"
+                download
+                className='bg-green-500 p-2'
+                >download</a>
+        </section>
+        <section className='bg-blue-100 p-4'> 
+            <h5 className='py-4'>2.s3 올리기 전 pdf 미리보기</h5> 
+            <input
+            type='file'
+            onChange={(e)=>{
+                console.log(e.target.files)
+                let reader = new FileReader()
+                reader.readAsDataURL(e.target.files[0])
+                reader.onload = () =>{
+                    setLoadedPdf([reader.result])
+                }
+            }}
+            />
+            <embed
+            src={loadedpdf[0]}
+            type="application/pdf"
+            width="100%"
+            height="500px"
+            />
+        </section>
+        <section className='bg-red-100 p-4 '>
+            <h5 className='py-4'>3.구매시 미리보기</h5>
+        <embed
+          src='http://md.egloos.com/file/pdf_sample.pdf'
+          type="application/pdf"
+          width="100%"
+          height="500px"
+        />
+            
         </section>
         <section className='section sectionCheckpointLayout py-24 rounded-full h-40 shadow-[0_-35px_60px_-15px_rgba(0,0,0,0.6)] shadow-gray-200'>
             <div className='sectionCheckpoint px-24 pb-16 flex gap-x-6'>
